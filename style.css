@@ -1,0 +1,153 @@
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --light: hsl(217, 12%, 63%);
+    --dark: hsl(213, 19%, 18%);
+    --vdark: hsl(216, 12%, 8%);
+    --field: hsl(208, 17%, 20%);
+}
+
+body {
+    box-sizing: border-box;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: var(--vdark);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Overpass", serif;
+    color: var(--light);
+}
+
+section {
+    position: absolute;
+    max-width: 50vh;
+    max-height: 50vh;
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(180deg, var(--dark) 0%, hsl(213, 32%, 11%) 100%);
+    background-size: 100% 100%;
+    border-radius: 40px;
+    padding: 4vh;
+}
+
+@media only screen {
+    section {
+        margin-right: 20px;
+        margin-left: 20px;
+        max-height: 70vh;
+  }
+}
+
+.rating {
+    display: block;
+}
+
+.star {
+    width: 55px;
+    height: 55px;
+    background-color: var(--field);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.how-did-we-do {
+    line-height: 160%;
+    margin-right: 10%;
+}
+
+h2{
+    color: white;
+    font-size: 180%;
+}
+
+p {
+    font-size: 110%;
+}
+
+.ratings {
+    display: flex;
+    justify-content: space-around;
+}
+
+.point {
+    width: 55px;
+    height: 55px;
+    background-color: var(--field);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 110%;
+    margin-top: 5%;
+    transition: 0.2s;
+}
+
+.point > .number {
+    margin-top: 4%;
+}
+
+.submit-button {
+    background-color: var(--orange);
+    margin-top: 10%;
+    border-radius: 35px;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--vdark);
+    font-size: 110%;
+    letter-spacing: 2px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.point:hover{
+    cursor: pointer;
+    background-color: var(--orange);
+    color: var(--vdark);
+}
+
+.point:active{
+    background-color: white;
+}
+
+.point.active {
+    background-color: white;
+    color: var(--vdark);
+}
+
+.submit-button:hover{
+    cursor: pointer;
+    background-color: white;
+}
+
+
+.thank-you {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img {
+    height: 37%;
+    width: 57%;
+}
+
+.user-rating {
+    width: 50%;
+    height: 10%;
+    border-radius: 20px;
+    color: var(--orange);
+    margin: 55px 0 20px 0;
+    background-color: var(--field);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
